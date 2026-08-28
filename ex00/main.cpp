@@ -7,18 +7,18 @@ int main()
 {
     std::cout << "=== Testing std::vector<int> ===" << std::endl;
 
-    std::vector<int> vec;
-    vec.push_back(10);
-    vec.push_back(20);
-    vec.push_back(30);
-    vec.push_back(40);
-    vec.push_back(50);
+    std::vector<char> vec;
+    vec.push_back('a');
+    vec.push_back('b');
+    vec.push_back('c');
+    vec.push_back('d');
+    vec.push_back('e');
 
     try
     {
-        std::vector<int>::iterator it = easyfind(vec, 30);
+        std::vector<char>::iterator it = easyfind(vec, 'e');
         std::cout << "Found in vector: " << *it << std::endl;
-        it = easyfind(vec, 99);
+        it = easyfind(vec, 't');
         std::cout << "Found in vector: " << *it << std::endl;
     }
     catch (const std::exception& e)
