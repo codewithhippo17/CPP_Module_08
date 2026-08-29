@@ -5,12 +5,12 @@
 
 template <typename T> class MutantStack : public std::stack<T> {
   private:
-  
+ 
   public:
     MutantStack() {}
-  
+ 
     MutantStack(const MutantStack &other) { *this = other; }
-  
+ 
     MutantStack &operator=(const MutantStack &other) {
       std::stack<T>::operator=(other);
       return (*this);
